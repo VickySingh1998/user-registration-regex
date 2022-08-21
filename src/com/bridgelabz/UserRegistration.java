@@ -43,6 +43,18 @@ public class UserRegistration {
             email();
         }
     }
+    public void contactNumber() {
+        scanner = new Scanner(System.in);
+        System.out.print("Enter Contact Number With Country Code : ");
+        String ContactNumber = scanner.nextLine();
+        boolean answer = Pattern.matches(".91?[6-9]\\d{9}", ContactNumber);
+        if (answer) {
+            System.out.println(ContactNumber);
 
+        } else {
+            System.out.println("enter valid contact number");
+            contactNumber();
+        }
+    }
 }
 
