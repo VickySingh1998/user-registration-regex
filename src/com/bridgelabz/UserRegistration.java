@@ -31,6 +31,7 @@ public class UserRegistration {
         }
     }
     public void email() {
+
         scanner = new Scanner(System.in);
         System.out.print("Enter Email ID : ");
         String emailId = scanner.next();
@@ -44,6 +45,7 @@ public class UserRegistration {
         }
     }
     public void contactNumber() {
+
         scanner = new Scanner(System.in);
         System.out.print("Enter Contact Number With Country Code : ");
         String ContactNumber = scanner.nextLine();
@@ -54,6 +56,20 @@ public class UserRegistration {
         } else {
             System.out.println("enter valid contact number");
             contactNumber();
+        }
+    }
+    public void password() {
+
+        scanner = new Scanner(System.in);
+        System.out.print("Enter Password  : ");
+        String password = scanner.nextLine();
+        boolean answer = Pattern.matches("[a-zA-Z]{8,}", password);
+        if (answer) {
+            System.out.println(password);
+
+        } else {
+            System.out.println("enter valid password\nminimum 8 characters");
+            password();
         }
     }
 }
