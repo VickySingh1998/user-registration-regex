@@ -25,10 +25,22 @@ public class UserRegistration {
         boolean answer = Pattern.matches("([A-Z]*[a-z]*){2,}", lastName);
         if (answer) {
             System.out.println(lastName);
-            System.out.println(answer);
         } else {
             System.out.println("please enter valid last name ");
             lastName();
+        }
+    }
+    public void email() {
+        scanner = new Scanner(System.in);
+        System.out.print("Enter email ID : ");
+        String emailId = scanner.next();
+        boolean answer = Pattern.matches("[a-zA-Z\\d.]+[^_!#$%&’*+/=?`{|}~^-]+@[a-zA-Z.-]+", emailId);
+        if (answer) {
+            System.out.println(emailId);
+
+        } else {
+            System.out.println("please enter valid email ID ");
+            email();
         }
     }
 }
