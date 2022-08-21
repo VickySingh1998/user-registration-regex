@@ -32,7 +32,7 @@ public class UserRegistration {
     }
     public void email() {
         scanner = new Scanner(System.in);
-        System.out.print("Enter email ID : ");
+        System.out.print("Enter Email ID : ");
         String emailId = scanner.next();
         boolean answer = Pattern.matches("[a-zA-Z\\d.]+[^_!#$%&’*+/=?`{|}~^-]+@[a-zA-Z.-]+", emailId);
         if (answer) {
@@ -43,5 +43,6 @@ public class UserRegistration {
             email();
         }
     }
+
 }
 
